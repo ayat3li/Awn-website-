@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN | Opportunities</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .opportunities {
+            padding: 50px 6%;
+            text-align: center;
+        }
+
+        .opportunities h1 {
+            color: var(--green);
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .opportunities-intro {
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .opportunity-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .opportunity-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .opportunity-card h2 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .join-btn {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">AWN<span>.</span></a>
+
+    <div class="header-actions">
+        <button id="languageBtn" onclick="changeLanguage()">العربية</button>
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a href="opportunities.html" data-en="Opportunities" data-ar="الفرص التطوعية">Opportunities</a>
+    <a href="organizations.html" data-en="Organizations" data-ar="المنظمات">Organizations</a>
+    <a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a>
+    <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</nav>
+
+<main class="opportunities">
+
+    <h1 data-en="Volunteer Opportunities"
+        data-ar="الفرص التطوعية">
+        Volunteer Opportunities
+    </h1>
+
+    <p class="opportunities-intro"
+       data-en="Discover ways to help your community and make a positive impact."
+       data-ar="اكتشف طرقاً لمساعدة مجتمعك وصناعة أثر إيجابي.">
+       Discover ways to help your community and make a positive impact.
+    </p>
+
+    <div class="opportunity-grid">
+
+        <div class="opportunity-card">
+            <div class="opportunity-icon">🏥</div>
+            <h2 data-en="Healthcare" data-ar="المجال الصحي">Healthcare</h2>
+            <p data-en="Help patients and support healthcare initiatives."
+               data-ar="ساعد المرضى وشارك في المبادرات الصحية.">
+               Help patients and support healthcare initiatives.
+            </p>
+            <a href="register.html" class="join-btn"
+               data-en="Join Now" data-ar="انضم الآن">Join Now</a>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-icon">📚</div>
+            <h2 data-en="Education" data-ar="التعليم">Education</h2>
+            <p data-en="Support students through learning and educational activities."
+               data-ar="ساعد الطلاب من خلال التعليم والأنشطة التعليمية.">
+               Support students through learning and educational activities.
+            </p>
+            <a href="register.html" class="join-btn"
+               data-en="Join Now" data-ar="انضم الآن">Join Now</a>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-icon">🤝</div>
+            <h2 data-en="Community Support" data-ar="دعم المجتمع">Community Support</h2>
+            <p data-en="Help families and people in need."
+               data-ar="ساعد الأسر والأشخاص المحتاجين.">
+               Help families and people in need.
+            </p>
+            <a href="register.html" class="join-btn"
+               data-en="Join Now" data-ar="انضم الآن">Join Now</a>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-icon">🌱</div>
+            <h2 data-en="Environment" data-ar="البيئة">Environment</h2>
+            <p data-en="Take part in cleaning and environmental campaigns."
+               data-ar="شارك في حملات النظافة والمحافظة على البيئة.">
+               Take part in cleaning and environmental campaigns.
+            </p>
+            <a href="register.html" class="join-btn"
+               data-en="Join Now" data-ar="انضم الآن">Join Now</a>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-icon">👶</div>
+            <h2 data-en="Child Support" data-ar="دعم الأطفال">Child Support</h2>
+            <p data-en="Participate in activities that support and protect children."
+               data-ar="شارك في الأنشطة التي تدعم الأطفال وتحميهم.">
+               Participate in activities that support and protect children.
+            </p>
+            <a href="register.html" class="join-btn"
+               data-en="Join Now" data-ar="انضم الآن">Join Now</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p data-en="© 2026 AWN. Together, We Make a Difference."
+       data-ar="© 2026 عون. معاً نصنع الفرق.">
+       © 2026 AWN. Together, We Make a Difference.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
