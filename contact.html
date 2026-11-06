@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-section {
+            padding: 50px 6%;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            color: var(--green);
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: auto;
+            background: var(--card);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .contact-container label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #b8c9bd;
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-container textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-container button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            background: var(--green);
+            color: white;
+            font-size: 16px;
+        }
+
+        body[dir="rtl"] .contact-container {
+            text-align: right;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">AWN<span>.</span></a>
+
+    <div class="header-actions">
+        <button id="languageBtn" onclick="changeLanguage()">العربية</button>
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a href="opportunities.html" data-en="Opportunities" data-ar="الفرص التطوعية">Opportunities</a>
+    <a href="organizations.html" data-en="Organizations" data-ar="المنظمات">Organizations</a>
+    <a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a>
+    <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</nav>
+
+<main class="contact-section">
+
+    <h1 data-en="Contact Us" data-ar="تواصل معنا">
+        Contact Us
+    </h1>
+
+    <p class="contact-intro"
+       data-en="Have a question or suggestion? We would love to hear from you."
+       data-ar="لديك سؤال أو اقتراح؟ يسعدنا أن نسمع منك.">
+       Have a question or suggestion? We would love to hear from you.
+    </p>
+
+    <form class="contact-container"
+          onsubmit="event.preventDefault(); alert(currentLanguage === 'en' ? 'Thank you for contacting AWN!' : 'شكراً لتواصلك مع عون!'); this.reset();">
+
+        <label for="name" data-en="Your Name" data-ar="الاسم">
+            Your Name
+        </label>
+        <input type="text" id="name" required
+               placeholder="Enter your name">
+
+        <label for="email" data-en="Your Email" data-ar="البريد الإلكتروني">
+            Your Email
+        </label>
+        <input type="email" id="email" required
+               placeholder="Enter your email">
+
+        <label for="message" data-en="Your Message" data-ar="رسالتك">
+            Your Message
+        </label>
+        <textarea id="message" required
+                  placeholder="Write your message"></textarea>
+
+        <button type="submit"
+                data-en="Send Message"
+                data-ar="إرسال الرسالة">
+            Send Message
+        </button>
+
+    </form>
+
+    <div class="contact-info">
+        <p>💚 AWN – Together, We Make a Difference.</p>
+    </div>
+
+</main>
+
+<footer>
+    <p data-en="© 2026 AWN. Together, We Make a Difference."
+       data-ar="© 2026 عون. معاً نصنع الفرق.">
+       © 2026 AWN. Together, We Make a Difference.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
