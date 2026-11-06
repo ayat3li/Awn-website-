@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--bg: #f7f8f2;
+--text: #26382f;
+--green: #267653;
+--card: #ffffff;
+--nav: #e7eee5;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: var(--bg);
+color: var(--text);
+transition: 0.3s;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+body.dark {
+--bg: #151d19;
+--text: #f1f5f1;
+--green: #67c695;
+--card: #222e27;
+--nav: #202b24;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 6%;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.logo {
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: var(--green);
+}
+
+.logo span {
+color: #d9a441;
+}
+
+.header-actions {
+display: flex;
+align-items: center;
+gap: 8px;
+flex-wrap: wrap;
+}
+
+button,
+.login-btn {
+padding: 9px 13px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 14px;
+}
+
+button {
+background: var(--nav);
+color: var(--text);
+}
+
+.login-btn {
+background: var(--green);
+color: white;
+text-decoration: none;
+}
+
+nav {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+padding: 15px;
+background: var(--nav);
+}
+
+nav a {
+text-decoration: none;
+color: var(--text);
+padding: 8px;
+}
+
+nav a:hover {
+color: var(--green);
+}
+
+.hero {
+flex: 1;
+text-align: center;
+padding: 90px 20px;
+}
+
+.welcome {
+color: var(--green);
+font-weight: bold;
+letter-spacing: 2px;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-size: clamp(32px, 6vw, 55px);
+margin-bottom: 20px;
+}
+
+.description {
+max-width: 550px;
+margin: 0 auto 30px;
+line-height: 1.8;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+padding: 13px 20px;
+border-radius: 8px;
+text-decoration: none;
+}
+
+.primary-btn {
+background: var(--green);
+color: white;
+}
+
+.secondary-btn {
+border: 1px solid var(--green);
+color: var(--green);
+}
+
+footer {
+text-align: center;
+padding: 22px 10px;
+background: var(--nav);
+margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+header {
+justify-content: center;
+}
+
+.hero {
+    padding: 60px 18px;
+}
+
+}
+#loginForm {
+max-width: 400px;
+margin: 30px auto;
+padding: 25px;
+background: var(--card);
+border-radius: 12px;
+text-align: left;
+}
+
+#loginForm label {
+display: inline-block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+
+#loginForm input {
+width: 100%;
+padding: 12px;
+border: 1px solid #b8c9bd;
+border-radius: 7px;
+background: var(--bg);
+color: var(--text);
+font-size: 16px;
+}
+
+#loginForm button {
+width: 100%;
+margin-top: 10px;
+}
+
+body[dir="rtl"] #loginForm {
+text-align: right;
+}
+
+#loginForm button.primary-btn {
+background: var(--green);
+color: white;
+}
+#loginForm {
+max-width: 400px;
+margin: 30px auto;
+padding: 25px;
+background: var(--card);
+border-radius: 12px;
+text-align: left;
+}
+
+#loginForm label {
+display: inline-block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
