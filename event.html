@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN | Events</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .events-section {
+            padding: 50px 6%;
+            text-align: center;
+        }
+
+        .events-section h1 {
+            color: var(--green);
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .events-intro {
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .event-card {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 28px 22px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .event-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .event-card h2 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .event-card p {
+            line-height: 1.8;
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 13px;
+            background: var(--nav);
+            color: var(--green);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">AWN<span>.</span></a>
+
+    <div class="header-actions">
+        <button id="languageBtn" onclick="changeLanguage()">العربية</button>
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a href="opportunities.html" data-en="Opportunities" data-ar="الفرص التطوعية">Opportunities</a>
+    <a href="organizations.html" data-en="Organizations" data-ar="المنظمات">Organizations</a>
+    <a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a>
+    <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</nav>
+
+<main class="events-section">
+
+    <h1 data-en="Volunteer Events" data-ar="الفعاليات التطوعية">
+        Volunteer Events
+    </h1>
+
+    <p class="events-intro"
+       data-en="Discover our community activities and join us in making a difference."
+       data-ar="اكتشف أنشطتنا المجتمعية وشارك معنا في صناعة الفرق.">
+       Discover our community activities and join us in making a difference.
+    </p>
+
+    <div class="events-grid">
+
+        <div class="event-card">
+            <div class="event-icon">🩺</div>
+            <h2 data-en="Health Awareness Campaign"
+                data-ar="حملة التوعية الصحية">
+                Health Awareness Campaign
+            </h2>
+            <p data-en="Promoting health awareness and sharing useful health information."
+               data-ar="نشر الوعي الصحي وتقديم المعلومات الصحية المفيدة.">
+               Promoting health awareness and sharing useful health information.
+            </p>
+            <span class="event-date" data-en="Community Event"
+                  data-ar="فعالية مجتمعية">Community Event</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">🧹</div>
+            <h2 data-en="Clean Environment Day"
+                data-ar="يوم البيئة النظيفة">
+                Clean Environment Day
+            </h2>
+            <p data-en="Working together to clean public places and protect the environment."
+               data-ar="العمل معاً لتنظيف الأماكن العامة والمحافظة على البيئة.">
+               Working together to clean public places and protect the environment.
+            </p>
+            <span class="event-date" data-en="Environmental Event"
+                  data-ar="فعالية بيئية">Environmental Event</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">🎒</div>
+            <h2 data-en="Back to School Initiative"
+                data-ar="مبادرة العودة إلى المدارس">
+                Back to School Initiative
+            </h2>
+            <p data-en="Supporting students with educational supplies and school activities."
+               data-ar="دعم الطلاب بالمستلزمات التعليمية والأنشطة المدرسية.">
+               Supporting students with educational supplies and school activities.
+            </p>
+            <span class="event-date" data-en="Educational Event"
+                  data-ar="فعالية تعليمية">Educational Event</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">🍲</div>
+            <h2 data-en="Food Support Campaign"
+                data-ar="حملة الدعم الغذائي">
+                Food Support Campaign
+            </h2>
+            <p data-en="Helping provide food assistance to families in need."
+               data-ar="المساهمة في توفير المساعدات الغذائية للأسر المحتاجة.">
+               Helping provide food assistance to families in need.
+            </p>
+            <span class="event-date" data-en="Humanitarian Event"
+                  data-ar="فعالية إنسانية">Humanitarian Event</span>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p data-en="© 2026 AWN. Together, We Make a Difference."
+       data-ar="© 2026 عون. معاً نصنع الفرق.">
+       © 2026 AWN. Together, We Make a Difference.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
