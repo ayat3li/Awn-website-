@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWN | Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .login-section {
+            flex: 1;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .login-section h1 {
+            color: var(--green);
+            margin-bottom: 12px;
+            font-size: 34px;
+        }
+
+        .login-box {
+            max-width: 420px;
+            margin: 25px auto;
+            padding: 30px;
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .login-box label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #b8c9bd;
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 16px;
+        }
+
+        .login-box button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            background: var(--green);
+            color: white;
+            font-size: 16px;
+        }
+
+        .login-note {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        .login-note a {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        body[dir="rtl"] .login-box {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">AWN<span>.</span></a>
+
+    <div class="header-actions">
+        <button id="languageBtn" onclick="changeLanguage()">العربية</button>
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a href="opportunities.html" data-en="Opportunities" data-ar="الفرص التطوعية">Opportunities</a>
+    <a href="organizations.html" data-en="Organizations" data-ar="المنظمات">Organizations</a>
+    <a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a>
+    <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</nav>
+
+<main class="login-section">
+
+    <h1 data-en="Welcome Back!" data-ar="مرحباً بعودتك!">
+        Welcome Back!
+    </h1>
+
+    <p data-en="Login to your AWN account."
+       data-ar="سجّل الدخول إلى حسابك في عون.">
+       Login to your AWN account.
+    </p>
+
+    <form class="login-box" onsubmit="event.preventDefault(); alert(currentLanguage === 'en' ? 'Login demo only. Database connection is coming soon.' : 'تسجيل الدخول تجريبي فقط. سيتم ربط قاعدة البيانات لاحقاً.');">
+
+        <label for="email" data-en="Email Address"
+               data-ar="البريد الإلكتروني">
+            Email Address
+        </label>
+
+        <input type="email" id="email"
+               placeholder="Enter your email" required>
+
+        <label for="password" data-en="Password"
+               data-ar="كلمة المرور">
+            Password
+        </label>
+
+        <input type="password" id="password"
+               placeholder="Enter your password" required>
+
+        <button type="submit"
+                data-en="Login"
+                data-ar="تسجيل الدخول">
+            Login
+        </button>
+
+        <p class="login-note">
+            <span data-en="Don't have an account?"
+                  data-ar="ليس لديك حساب؟">
+                Don't have an account?
+            </span>
+            <a href="register.html"
+               data-en="Sign Up"
+               data-ar="إنشاء حساب">
+                Sign Up
+            </a>
+        </p>
+
+    </form>
+
+</main>
+
+<footer>
+    <p data-en="© 2026 AWN. Together, We Make a Difference."
+       data-ar="© 2026 عون. معاً نصنع الفرق.">
+       © 2026 AWN. Together, We Make a Difference.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
